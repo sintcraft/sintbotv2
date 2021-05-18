@@ -11,8 +11,8 @@ client.on('ready', () => {
 
 client.on('message', (msg) => {
     if(msg.author.id == client.user.id)return
-    //archivo = fs.readFileSync('src/history.txt', {encoding: 'utf-8'})
-    /*if(msg.channel.id == '780794467341828099'){
+    archivo = fs.readFileSync('src/history.txt', {encoding: 'utf-8'})
+    if(msg.channel.id == '780794467341828099'){
         if(msg.content[0]=='(')return
         let mensaje = msg.content.split(' ')
         mensaje = mensaje[0].split('(')
@@ -46,7 +46,7 @@ client.on('message', (msg) => {
         partido = partido.join(' ')
         fs.writeFileSync('src/history.txt', partido, { encoding:'utf-8' })
         msg.channel.send('Palabra eliminada correctamente!, `' + eliminado[0] + '`')
-    }*/
+    }
 })
 
 client.login(process.env.discordToken)
