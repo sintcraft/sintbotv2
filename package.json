@@ -1,18 +1,17 @@
 {
-  "name": "sintbotv2",
+  "name": "polarbotv2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon src/main"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "dotenv": "^9.0.2",
-    "fs": "0.0.1-security"
+    "dotenv": "^10.0.0",
+    "mongoose": "^5.12.11"
   }
 }

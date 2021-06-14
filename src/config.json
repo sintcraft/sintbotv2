@@ -1,0 +1,9 @@
+{
+   "prefix": "!",
+   "historyChannel": "853644475456421898",
+   "CuartelGuildId": "616084864705495111",
+   "alcaldia": {
+      "channelId": "853817478022692864",
+      "msgPreList": "En este canal podras postularte para alcalde del servidor\n\nPara postularte lo unico que tienes que hacer es poner:\n```!postularse <propuestas>```asi te postularas y tus propuestas seran guardadas y los demas usuarios podran leer tus propuestas, **es valido si no pones ninguna propuesta.**\n\n Se escojera un alcalde mensualmente o esa es la intencion el alcalde tendra cierto poder dentro del servidor como mover usuarios en canales de voz, o prioridad de palabra.\n Pero si abusa de su poder o renuncia lo podra hacer de cualquier manera y se abriran elecciones otra vez.\nPara votar por un candidato tendras que usar el comando `!votar` o `!vote` de la siguiente manera:```!votar @sintcraft```**Importante aclarar que si o si tendras que taguear a tu candidato.**\nLas elecciones acabaran en 1 semana de haber sido iniciadas si hay empate se ara al azar entre los candidatos finalistas.\n\n**Lista de candidatos**```"
+   }
+}
