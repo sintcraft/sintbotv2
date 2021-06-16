@@ -3,9 +3,9 @@ const mayor = new mongoose.Schema({
    authorId: {
       type: String,
    },
-   propuestas: {
+   proposals: {
       type: String,
-      default: ""
+      default: require('../../config.json').mayors.proposalsDefault
    },
    votes: {
       type: Number,
