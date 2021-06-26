@@ -1,6 +1,7 @@
 const config = require('../config.json')
 const msgHistoryManager = require('../Tools/msgHistoryManager')
 const mayorManager = require('../Tools/mayorManager')
+const messageOfOtherGuilsd = require('../modules/onMessageOfGuilds')
 
 // Commands
 const history = require('../commands/history')
@@ -8,12 +9,17 @@ const exportCmd = require('../commands/export')
 const apply = require('../commands/apply')
 const vote = require('../commands/vote')
 const proposals = require('../commands/proposals')
+const list_net = require('../commands/list_net')
+const help = require('../commands/help')
+const invite = require('../commands/invite')
 
 module.exports = async(client, msg) => {
    if(msg.author.bot)return
-   msg.content = msg.content.toLowerCase()
-   if(msg.guild.id != config.CuartelGuildId)return
-
+   if(msg.guild.id != config.CuartelGuildId || msg.channel.id == config.telecomunications.cuartelId){
+      await messageOfOtherGuilsd(client, msg)
+      return
+   }
+   
    if(msg.channel.id == config.historyChannel){
       msgHistoryManager.onMessage(msg)
       return
@@ -43,5 +49,14 @@ module.exports = async(client, msg) => {
    }
    if((cmd == 'proposals' || cmd == 'propuestas') && msg.channel.id == config.mayors.channelId){
       await proposals(client, msg)
+   }
+   if(cmd == 'list-net' || cmd == 'list'){
+      await list_net(client, msg)
+   }
+   if(cmd == 'help' || cmd == 'ayuda'){
+      await help(msg, { prefix })
+   }
+   if(cmd == 'invitar' || cmd == 'invite'){
+      invite(client, msg)
    }
 }
