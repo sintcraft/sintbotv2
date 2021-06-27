@@ -8,7 +8,7 @@ module.exports = async(client, msg, args) => {
    let data = await votesDB.findOne({ voter: user.id })
    let mention = msg.mentions.members.first()
    if(data !=  null && args[0] == 'nulo'){
-      data.delete()
+      await data.delete()
       msg.reply(
          'Ahora tu voto es nulo, recuerda que votar es lo mejor, o no? :face_with_raised_eyebrow:'
       ).then((message) =>  {
@@ -16,6 +16,7 @@ module.exports = async(client, msg, args) => {
             message.delete()
          }, 3500)
       })
+      await mayorManager.updateVotes()
       return
    }
    if(data == null && !mention){

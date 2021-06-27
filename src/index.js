@@ -12,6 +12,9 @@ for(let event of fs.readdirSync(__dirname+'/Events/', { encoding: 'utf-8' })){
   client.on(event, Runner.bind(null, client))
   delete require.cache[require.resolve('./Events/'+event)];
 }
+/*client.on('message', (msg) =>{
+  
+})*/
 
 //Login discord
 client.login(process.env.discordToken)

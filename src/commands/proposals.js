@@ -28,6 +28,6 @@ module.exports = async(client, msg) => {
    ).then((message) =>  {
       setTimeout(function(){
          message.delete()
-      },5000)
+      },15000)
    })
 }
