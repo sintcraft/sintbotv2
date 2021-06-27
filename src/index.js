@@ -13,12 +13,7 @@ for(let event of fs.readdirSync(__dirname+'/Events/', { encoding: 'utf-8' })){
   delete require.cache[require.resolve('./Events/'+event)];
 }
 /*client.on('message', (msg) =>{
-  msg.member.hasPermission('ADMINISTRATOR')
-  msg.guild.channels.create(, {
-    type: 'text'
-  }).then(channel => {
-    channel.id
-  })
+  
 })*/
 
 //Login discord

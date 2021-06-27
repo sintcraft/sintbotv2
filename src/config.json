@@ -2,6 +2,7 @@
    "prefix": "!",
    "historyChannel": "853644475456421898",
    "CuartelGuildId": "616084864705495111",
+   "superUser": "747267711851167846",
    "mayors": {
       "channelId": "853817478022692864",
       "msgPreList": "En este canal podras postularte para alcalde del servidor\n\nPara postularte lo unico que tienes que hacer es poner:\n```!postularse <propuestas>```asi te postularas y tus propuestas seran guardadas y los demas usuarios podran leer tus propuestas, **es valido si no pones ninguna propuesta.**\n\n Se escojera un alcalde cada 2 meses o esa es la intencion, El mismo tendra cierto poder dentro del servidor.\n Pero si abusa de su poder o renuncia lo podra hacer, y se abriran elecciones otra vez.\nPara votar por un candidato tendras que usar el comando `!votar` o `!vote` de la siguiente manera:```!votar @sintcraft``` o para ver las propuestas de un candidato podras usar `!propuestas` de la siguiente manera ```!propuestas @sintcraft```**Importante aclarar que si o si tendras que taguear a tu candidato.**\nLas elecciones acabaran en 1 semana de haber sido iniciadas si hay empate se hara al azar entre los candidatos finalistas.\n**P. D. Los comandos solo funcionan en este canal.**\n\n**Lista de candidatos**```",
@@ -11,11 +12,10 @@
    "telecomunications": {
       "cuartelId": "853670492112289843",
       "defaultName": "sintnet-channel",
-      "descriptionHelpCommand": "Hola, sintbot es un bot de discord desarrollado por [sintcraft](https://discord.gg/MeRv7RE) para el publico. Puedes unirte a la **SintNet** usando el comando `%prefix%invite `\nEl prefix de este servidor es `%prefix%`\n\n**%prefix%setup** -> Inicia y crea el canal de sintnet, solo personas con permisos de administrador.\n**%prefix%setprefix** -> Para cambiar el prefijo de los comandos para este servidor, solo personas con permisos de administrador.\n**%prefix%setname** -> Para cambiar el nombre publico del servidor en la red, solo personas con permisos de administrador.\n**%prefix%list-net** -> Lista a tiempo real todos los servidores en la red.\n**%prefix%help** -> Te brinda ayuda\n**%prefix%invite** -> Por si te interesa unir a tu servidor a la red de SintNet",
+      "descriptionHelpCommand": "Hola, sintbot es un bot de discord desarrollado por [sintcraft](https://discord.gg/MeRv7RE) para el publico. Puedes unirte a la **SintNet** usando el comando `%prefix%invite `\nEl prefix de este servidor es `%prefix%`\n\n**%prefix%setup** -> Inicia y crea el canal de sintnet, solo personas con permisos de administrador.\n**%prefix%setprefix** -> Para cambiar el prefijo de los comandos para este servidor, solo personas con permisos de administrador.\n**%prefix%setname** -> Para cambiar el nombre publico del servidor en la red, solo personas con permisos de administrador.\n**%prefix%shadow-ban** -> Banear a alguien de tu servidor de la SintNet\n**%prefix%shadow-pardon** -> Desbanear a alguien de tu servidor de la SintNet\n**%prefix%list-net** -> Lista a tiempo real todos los servidores en la red.\n**%prefix%help** -> Te brinda ayuda\n**%prefix%invite** -> Por si te interesa unir a tu servidor a la red de SintNet",
       "filtros": [
          "@everyone",
-         "@here",
-         "<@"
+         "@here"
       ]
    }
 }

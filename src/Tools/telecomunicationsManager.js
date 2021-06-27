@@ -1,7 +1,8 @@
 const telecommunicationsDB = require('../Database/models/telecommunications')
 const sendAll = async(client, msg, data) => {
    let guildId = data.guildId
-   let messageSend = "**[" + data.name+ "]** "+msg.author.username+" >> "+msg.content
+   let messageSend = "**[" + data.name + "]** "+msg.author.username+" >> "+msg.content
+   if(guildId == '0')messageSend = "**=-=-=-= "+data.name+" =-=-=-=**\n **-> ** "+msg.content
    // Logic to send message to all servers, exeption one server
    let serversDb = await telecommunicationsDB.find()
    for(let server of serversDb){
@@ -15,14 +16,16 @@ const sendAll = async(client, msg, data) => {
    }
 }
 const ifBanOnGuild = async(memberId, guildId) => {
+   let status = false
    let data = await telecommunicationsDB.findOne({ guildId })
    for(let userId of data.shadowBans){
       if(userId == memberId){
-         return true;
+         status = true;
       }
    }
-   return false
+   return status
 }
+
 
 module.exports = {
    ifBanOnGuild,
