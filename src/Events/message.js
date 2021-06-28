@@ -1,5 +1,6 @@
 const config = require('../config.json')
 const msgHistoryManager = require('../Tools/msgHistoryManager')
+const spamManager = require('../Tools/spamManager')
 const mayorManager = require('../Tools/mayorManager')
 const messageOfOtherGuilsd = require('../modules/onMessageOfGuilds')
 const telecommunicationsDB = require('../Database/models/telecommunications')
@@ -18,13 +19,15 @@ const shadownBan = require('../commands/shadownBan')
 const shadownPardon = require('../commands/shadownPardon')
 
 module.exports = async(client, msg) => {
-   if(msg.author.bot)return
-   
+   if(msg.author.bot || msg.channel.type == 'dm')return
    if(msg.guild.id != config.CuartelGuildId || msg.channel.id == config.telecomunications.cuartelId){
       await messageOfOtherGuilsd(client, msg)
       return
    }
-   
+   if(msg.channel.id == config.spamChannel){
+      await spamManager.onMessage(msg)
+      return
+   }
    if(msg.channel.id == config.historyChannel){
       msgHistoryManager.onMessage(msg)
       return
