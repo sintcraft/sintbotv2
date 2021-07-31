@@ -57,7 +57,7 @@
          },
          {
             "type": "txt",
-            "data": "- En el canal de #roles podras ponerte roles a tu gusto y ajustar el servidor a tus necesidades!. <:sintFlushed:857255776846741545>",
+            "data": "- En el canal de <#783786106570145802> podras ponerte roles a tu gusto y ajustar el servidor a tus necesidades!. <:sintFlushed:857255776846741545>",
             "timeOut": 6000
          },
          {
@@ -77,7 +77,7 @@
          },
          {
             "type": "txt",
-            "data": "%user% te dare 2 minutos para que leas el canal dereglas o tambien llamado <#699968624202350743>",
+            "data": "%user% te dare 2 minutos para que leas el canal de reglas o tambien llamado <#699968624202350743>",
             "timeOut": 750
          },
          {
