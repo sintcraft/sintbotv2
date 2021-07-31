@@ -19,7 +19,6 @@ const shadownBan = require('../commands/shadownBan')
 const shadownPardon = require('../commands/shadownPardon')
 
 module.exports = async(client, msg) => {
-   console.log(msg.content)
    if(msg.author.bot || msg.channel.type == 'dm')return
    if(msg.guild.id != config.CuartelGuildId || msg.channel.id == config.telecomunications.cuartelId){
       await messageOfOtherGuilsd(client, msg)
