@@ -26,6 +26,11 @@
             "timeOut": 0
          },
          {
+            "type": "role",
+            "data": "870842298336956436",
+            "timeOut": 0
+         },
+         {
             "type": "txt",
             "data": "Hola! %user% veo que eres nuevo.. <:sintPsicosiado:855572689157357568>",
             "timeOut": 200
