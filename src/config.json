@@ -10,13 +10,63 @@
       "proposalsDefault": "**No** hay propuestas de este candidato",
       "successfullyApplyMsg": "Te has registrado como candidato satisfactoriamente."
    },
+   "welcome": {
+      "categoryId": "768155030888120390",
+      "layout": "Hola - %number%",
+      "beforeRoleId": "870842298336956436",
+      "afterRoleId": "616084946770985170",
+      "permissions": {
+         "allow": ["VIEW_CHANNEL"],
+         "deny": ["VIEW_CHANNEL"]
+      },
+      "messages": [
+         {
+            "type": "img",
+            "data": "welcomeImg.png",
+            "timeOut": 0
+         },
+         {
+            "type": "txt",
+            "data": "Hola! %user% veo que eres nuevo.. <:sintPsicosiado:855572689157357568>",
+            "timeOut": 200
+         },
+         {
+            "type": "txt",
+            "data": "Yo soy <@765417813221048340> y te explicare un poco de lo que va el servidor!",
+            "timeOut": 5000
+         },
+         {
+            "type": "txt",
+            "data": "Bueno esto es un estado democrático :raised_hands:,\n\ncada cierto tiempo hay votaciones para elejir el <@&856880089907200000> del discord",
+            "timeOut": 3000
+         },
+         {
+            "type": "txt",
+            "data": "hmm.. sabes que? %user% te dare 2 minutos para que leas las reglas o tambien llamada <#699968624202350743>",
+            "timeOut": 5000
+         },
+         {
+            "type": "role",
+            "data": "870844362827919370",
+            "timeOut": 3000
+         },
+         {
+            "type": "end",
+            "data": "",
+            "timeOut": 20000
+         }
+      ]
+   },
    "telecomunications": {
       "cuartelId": "853670492112289843",
       "defaultName": "sintnet-channel",
-      "descriptionHelpCommand": "Hola, sintbot es un bot de discord desarrollado por [sintcraft](https://discord.gg/MeRv7RE) para el publico. Puedes unirte a la **SintNet** usando el comando `%prefix%invite `\nEl prefix de este servidor es `%prefix%`\n\n**%prefix%setup** -> Inicia y crea el canal de sintnet, solo personas con permisos de administrador.\n**%prefix%setprefix** -> Para cambiar el prefijo de los comandos para este servidor, solo personas con permisos de administrador.\n**%prefix%setname** -> Para cambiar el nombre publico del servidor en la red, solo personas con permisos de administrador.\n**%prefix%shadow-ban** -> Banear a alguien de tu servidor de la SintNet\n**%prefix%shadow-pardon** -> Desbanear a alguien de tu servidor de la SintNet\n**%prefix%list-net** -> Lista a tiempo real todos los servidores en la red.\n**%prefix%help** -> Te brinda ayuda\n**%prefix%invite** -> Por si te interesa unir a tu servidor a la red de SintNet",
+      "descriptionHelpCommand": "Hola, sintbot es un bot de discord desarrollado por [sintcraft](https://discord.gg/MeRv7RE) para el publico. Puedes unirte a la **SintNet** usando el comando `%prefix%invite `\nEl prefix de este servidor es `%prefix%`\n\n**%prefix%setup** -> Inicia y crea el canal de sintnet, solo personas con permisos de administrador.\n**%prefix%setprefix** -> Para cambiar el prefijo de los comandos para este servidor, solo personas con permisos de administrador.\n**%prefix%setname** -> Para cambiar el nombre publico del servidor en la red, solo personas con permisos de administrador.\n**%prefix%shadown-list** -> Te da la lista de baneados en tu servidor\n**%prefix%shadow-ban** -> Banear a alguien de tu servidor de la SintNet\n**%prefix%shadow-pardon** -> Desbanear a alguien de tu servidor de la SintNet\n**%prefix%help** -> Te brinda ayuda\n**%prefix%invite** -> Por si te interesa unir a tu servidor a la red de SintNet",
       "filtros": [
          "@everyone",
-         "@here"
+         "@here",
+         "https://",
+         "http://",
+         "discord.gg/"
       ]
    }
 }

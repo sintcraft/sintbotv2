@@ -19,6 +19,7 @@ const shadownBan = require('../commands/shadownBan')
 const shadownPardon = require('../commands/shadownPardon')
 
 module.exports = async(client, msg) => {
+   console.log(msg.content)
    if(msg.author.bot || msg.channel.type == 'dm')return
    if(msg.guild.id != config.CuartelGuildId || msg.channel.id == config.telecomunications.cuartelId){
       await messageOfOtherGuilsd(client, msg)
@@ -58,9 +59,6 @@ module.exports = async(client, msg) => {
    if((cmd == 'proposals' || cmd == 'propuestas') && msg.channel.id == config.mayors.channelId){
       await proposals(client, msg)
    }
-   if(cmd == 'list-net' || cmd == 'list'){
-      await list_net(client, msg)
-   }
    if(cmd == 'help' || cmd == 'ayuda'){
       await help(msg, { prefix })
    }
@@ -69,11 +67,11 @@ module.exports = async(client, msg) => {
    }
    if((cmd == 'shadownban' || cmd == 'shadown-ban') && msg.member.hasPermission('ADMINISTRATOR')){
       let member = msg.mentions.members.first()
-      await shadownBan(member, msg, await telecommunicationsDB.findOne({ GuildId: config.CuartelGuildId }))
+      await shadownBan(member, msg, await telecommunicationsDB.findOne({ GuildId: msg.guild.id }))
    }
    if((cmd == 'shadownpardon' || cmd == 'shadown-pardon') && msg.member.hasPermission('ADMINISTRATOR')){
       let member = msg.mentions.members.first()
-      await shadownPardon(member, msg, await telecommunicationsDB.findOne({ GuildId: config.CuartelGuildId }))
+      await shadownPardon(member, msg, await telecommunicationsDB.findOne({ GuildId: msg.guild.id }))
    }
    if(msg.author.id != config.superUser)return
    if(cmd == 'list-guilds'){

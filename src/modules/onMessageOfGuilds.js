@@ -3,7 +3,7 @@ const telecomunicationsManager = require('../Tools/telecomunicationsManager')
 const config = require('../config.json')
 const MessageEmbed = require('discord.js').MessageEmbed
 //Commands
-const list_net = require('../commands/list_net')
+const shadownList = require('../commands/list_net')
 const help = require('../commands/help')
 const invite = require('../commands/invite')
 const shadownBan = require('../commands/shadownBan')
@@ -82,12 +82,12 @@ module.exports = async(client, msg) => {
       let member = msg.mentions.members.first()
       await shadownBan(member, msg, data)
    }
+   if((cmd == 'shadownlist' || cmd == 'shadown-list') && msg.member.hasPermission('ADMINISTRATOR')){
+      await shadownList(client, msg, data)
+   }
    if((cmd == 'shadownpardon' || cmd == 'shadown-pardon') && msg.member.hasPermission('ADMINISTRATOR')){
       let member = msg.mentions.members.first()
       await shadownPardon(member, msg, data)
-   }
-   if(cmd == 'list-net' || cmd == 'list'){
-      await list_net(client, msg)
    }
    if(cmd == 'invitar' || cmd == 'invite'){
       invite(client, msg)
