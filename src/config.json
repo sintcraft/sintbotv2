@@ -37,13 +37,43 @@
          },
          {
             "type": "txt",
-            "data": "Bueno esto es un estado democrático :raised_hands:,\n\ncada cierto tiempo hay votaciones para elejir el <@&856880089907200000> del discord",
+            "data": "Bueno esto es un estado democrático :raised_hands:,\n",
             "timeOut": 3000
          },
          {
             "type": "txt",
-            "data": "hmm.. sabes que? %user% te dare 2 minutos para que leas las reglas o tambien llamada <#699968624202350743>",
+            "data": "- cada cierto tiempo hay votaciones para elejir el <@&856880089907200000> del discord. <:sintNice:800552257199800320>",
+            "timeOut": 1000
+         },
+         {
+            "type": "txt",
+            "data": "- hay varios canales y dinamicas hechas solamente y exclusivamente para el servidor asi que te recomiendo leer la descripcion de los canales raros que veas. <:sintPiun:867574788192337920>",
+            "timeOut": 4000
+         },
+         {
+            "type": "txt",
+            "data": "- En el canal de #roles podras ponerte roles a tu gusto y ajustar el servidor a tus necesidades!. <:sintFlushed:857255776846741545>",
+            "timeOut": 6000
+         },
+         {
+            "type": "role",
+            "data": "870889220087111691",
+            "timeOut": 0
+         },
+         {
+            "type": "txt",
+            "data": "- Diviertete!",
             "timeOut": 5000
+         },
+         {
+            "type": "txt",
+            "data": "hmm.. sabes que?",
+            "timeOut": 3000
+         },
+         {
+            "type": "txt",
+            "data": "%user% te dare 2 minutos para que leas el canal dereglas o tambien llamado <#699968624202350743>",
+            "timeOut": 750
          },
          {
             "type": "role",
@@ -53,7 +83,7 @@
          {
             "type": "end",
             "data": "",
-            "timeOut": 20000
+            "timeOut": 60000
          }
       ]
    },
