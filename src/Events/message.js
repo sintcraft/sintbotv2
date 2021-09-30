@@ -17,6 +17,7 @@ const help = require('../commands/help')
 const invite = require('../commands/invite')
 const shadownBan = require('../commands/shadownBan')
 const shadownPardon = require('../commands/shadownPardon')
+const encrypt = require('../commands/encrypt')
 
 module.exports = async(client, msg) => {
    if(msg.author.bot || msg.channel.type == 'dm')return
@@ -63,6 +64,9 @@ module.exports = async(client, msg) => {
    }
    if(cmd == 'invitar' || cmd == 'invite'){
       invite(client, msg)
+   }
+   if(cmd == 'encrypt' || cmd == 'encriptar' || cmd == 'encryptar' || cmd == 'sha256'){
+      await encrypt(client, msg, args)
    }
    if((cmd == 'shadownban' || cmd == 'shadown-ban') && msg.member.hasPermission('ADMINISTRATOR')){
       let member = msg.mentions.members.first()

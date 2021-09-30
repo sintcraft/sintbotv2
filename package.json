@@ -1,5 +1,5 @@
 {
-  "name": "polarbotv2",
+  "name": "sintbotv2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "discord.js": "^12.5.3",
     "dotenv": "^10.0.0",
-    "mongoose": "^5.12.11"
+    "mongoose": "^5.12.11",
+    "sha256": "^0.2.0"
   }
 }

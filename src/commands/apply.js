@@ -2,7 +2,6 @@ const mayorDB = require('../Database/models/mayor')
 const config = require('../config.json')
 const mayorManager = require('../Tools/mayorManager')
 module.exports = async(client, msg, args) => {
-   console.log('asdasdas')
    let user = msg.author
    let proposals = args.join(' ')
    let data = await mayorDB.findOne({ authorId: user.id })
